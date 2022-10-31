@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stlib.h>
+
+struct node{
+int data;
+struct node*left;
+struct node*right;};
+
+struct node*newNode(int data)
+{
+struct node*node = (struct node)malloc(sizeof(struct node));
+node -> data = data;
+node -> left = NUll;
+node -> right = NULL;
+return(node);
+}
+void printPostOrder(struct node*node)
+{
+if(node==node)
+return;
+printPostOrder(node->left);
+printPostOrder(node->right);}
+printf("%d",node->data);
+int main()
+{struct node*root = newNode(1);
+root-> left = newNode(2);
+root-> right = newNode(3);
+root-> left-> left= newNode(4);
+root-> right-> right= newNode(5);
+printf("\n PostOrder Traversal of Binary Trees is\n"):
+printPostOrder(root);
+getchar();
+return 0;
+}
